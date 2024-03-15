@@ -16,6 +16,18 @@ h1 {
   margin-bottom: 2rem;
 }
 
+h3{
+  margin-top: 10px;
+  color: black;
+}
+h4{
+  color: black;
+}
+
+#info-text{
+  color: whitesmoke;
+}
+
 #searchText{
   height: 2rem;
 }
@@ -56,7 +68,7 @@ cursor: pointer;
   z-index: 230;
   top: 20%;
   left: 25%;
-  width: 50vw;
+  width: 40vw;
   height: 50vh;
 }
 
@@ -64,10 +76,21 @@ cursor: pointer;
 position: fixed;
 font-size: 1.4em;
 top: 20%;
-left: 25%;
+right: 35%;
 cursor: pointer;
 }
 
+.movie-container-modal{
+  margin: 10px;
+  position: fixed;
+  display: flex;
+  top: 20%;
+  left: 25%;
+}
+.movie-picture-modal{
+  height: 60%;
+  width: 60%;
+}
 
 
 

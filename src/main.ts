@@ -1,13 +1,14 @@
 import './style.css'
 import axios from 'axios';
 import { createHTML } from './htmlForMovies';
+import { IOmdbResponse } from './models/IOmdbResponse';
 
 
 document.getElementById("searchForm")?.addEventListener("submit", async (e) =>{
   e.preventDefault();
   const apiKey = import.meta.env.VITE_API_KEY;
   const movieSearch = document.getElementById("searchText").value;
-  const respons = await axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&s=${movieSearch}`);
+  const respons = await axios.get<IOmdbResponse>(`https://www.omdbapi.com/?apikey=${apiKey}&s=${movieSearch}`);
   const data = respons.data;
 
   createHTML(data.Search);
