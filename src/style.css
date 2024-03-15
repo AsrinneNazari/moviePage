@@ -45,6 +45,19 @@ h1 {
 background-color: whitesmoke;
 width: 320px; 
 margin: 1rem;
+cursor: pointer;
+}
+
+#modal-info{
+  display: none;
+  background-color: pink;
+  padding: 4% 10%;
+  position: fixed;
+  z-index: 230;
+  top: 20%;
+  left: 25%;
+  width: 50vw;
+  height: 50vh;
 }
 
 

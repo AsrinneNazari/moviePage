@@ -1,5 +1,6 @@
 export const createHTML = (movies) =>{
     const searchResults = document.getElementById("searchResults") as HTMLDivElement;
+    const modalInfo = document.getElementById("modal-info") as HTMLDivElement;
     searchResults.innerHTML = "";
   
     movies.forEach((movie) => {
@@ -11,6 +12,7 @@ export const createHTML = (movies) =>{
       movieContainer.className = "movieContainer";
       movieContainer.addEventListener("click", async () =>{
         const movieDetails = await (movie.Title);
+        modalInfo.style.display = "block"; 
         console.log(movieDetails);
         });
       title.innerHTML = movie.Title;
