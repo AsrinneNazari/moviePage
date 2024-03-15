@@ -20,5 +20,9 @@ export const createHTML = (movies) =>{
       movieContainer.appendChild(moviePicture);
       searchResults.appendChild(movieContainer);
     });
-  
+    const closemodal = document.getElementById("close-modal-info");
+    closemodal?.addEventListener("click", () =>{
+      modalInfo.style.display = "none";
+    })
+    
   }

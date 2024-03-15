@@ -51,13 +51,21 @@ cursor: pointer;
 #modal-info{
   display: none;
   background-color: pink;
-  padding: 4% 10%;
+  padding: 10% 10%;
   position: fixed;
   z-index: 230;
   top: 20%;
   left: 25%;
   width: 50vw;
   height: 50vh;
+}
+
+#close-modal-info{
+position: fixed;
+font-size: 1.4em;
+top: 20%;
+left: 25%;
+cursor: pointer;
 }
 
 
