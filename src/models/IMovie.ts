@@ -3,4 +3,5 @@ export interface IMovie {
     Poster: string;
     Year: string;
     Plot: string;
+    Actors: string;
   }

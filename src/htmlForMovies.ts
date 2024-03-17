@@ -40,18 +40,24 @@ export const createHTML = (movies) =>{
       const year = document.createElement("h5");
       const moviePicture = document.createElement("img");
       const moviePlot = document.createElement("div");
+      const movieActors = document.createElement("div");
+      const movieInfoContainer = document.createElement("div");
       movieContainer.className = "movie-container-modal";
       moviePicture.className = "movie-picture-modal";
+      movieInfoContainer.className = "movie-info-container";
 
       moviePicture.src = movie.Poster;
       title.innerHTML = movie.Title;
       year.innerHTML = "(" + movie.Year + ")";
-      moviePlot.innerHTML = movie.Plot;  //funkar ej, varför?
+      moviePlot.innerHTML = "Plot:" + movie.Plot;  //funkar ej, varför?
+      movieActors.innerHTML = "Actors:" + movie.Actors;  //funkar ej, varför?
 
+      movieInfoContainer.appendChild(title)
+      movieInfoContainer.appendChild(year)
+      movieInfoContainer.appendChild(moviePlot)
+      movieInfoContainer.appendChild(movieActors)
       movieContainer.appendChild(moviePicture);
-      movieContainer.appendChild(title);
-      movieContainer.appendChild(year);
-      movieContainer.appendChild(moviePlot);
+      movieContainer.appendChild(movieInfoContainer);
 
       info.appendChild(movieContainer);
     

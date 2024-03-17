@@ -84,11 +84,11 @@ cursor: pointer;
   margin: 10px;
   position: fixed;
   display: flex;
+  justify-content: space-around;
   top: 20%;
   left: 25%;
 }
 .movie-picture-modal{
-  height: 60%;
   width: 60%;
 }
 
