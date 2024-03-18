@@ -3,7 +3,6 @@ import axios from 'axios';
 import { IOmdbResponse } from './models/IOmdbResponse';
 import { createmodalInfo } from './createmodalInfo';
 
-
 document.getElementById("searchForm")?.addEventListener("submit", async (e) =>{
   e.preventDefault();
   const apiKey = import.meta.env.VITE_API_KEY;
@@ -12,7 +11,6 @@ document.getElementById("searchForm")?.addEventListener("submit", async (e) =>{
   const respons = await axios.get<IOmdbResponse>(`https://www.omdbapi.com/?apikey=${apiKey}&s=${movieSearchValue}`);
   const data = respons.data;
   const movies = data.Search;
-
 
  const createHTML = () =>{
     const searchResults = document.getElementById("searchResults") as HTMLDivElement;
@@ -46,8 +44,6 @@ document.getElementById("searchForm")?.addEventListener("submit", async (e) =>{
       modalInfo.style.display = "none";
     })
   }
-
-  
     createHTML();
 })
 
