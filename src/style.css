@@ -60,23 +60,28 @@ margin: 1rem;
 cursor: pointer;
 }
 
+.movieContainer:hover{
+  box-shadow: rgb(173, 2, 173) 0px 0px 80px;
+  transition:0.3s;
+}
+
 #modal-info{
   display: none;
-  background-color: pink;
+  background-color: gray;
   padding: 10% 10%;
   position: fixed;
   z-index: 230;
   top: 20%;
   left: 25%;
-  width: 40vw;
-  height: 50vh;
+  width: 55vw;
+  height: 70vh;
 }
 
 #close-modal-info{
 position: fixed;
 font-size: 1.4em;
 top: 20%;
-right: 35%;
+right: 20%;
 cursor: pointer;
 }
 
@@ -84,15 +89,18 @@ cursor: pointer;
   margin: 10px;
   position: fixed;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   top: 20%;
   left: 25%;
+  width: 45vw;
 }
 .movie-picture-modal{
   width: 60%;
 }
 
-
+.movie-info-container{
+  margin: 20px;
+}
 
 button {
   border-radius: 8px;
@@ -112,4 +120,3 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-

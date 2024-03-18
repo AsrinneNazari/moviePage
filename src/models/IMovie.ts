@@ -4,4 +4,6 @@ export interface IMovie {
     Year: string;
     Plot: string;
     Actors: string;
+    imdbID: string;
+    imdbRating: string;
   }
