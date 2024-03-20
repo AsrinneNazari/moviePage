@@ -12,6 +12,7 @@ document.getElementById("searchForm")?.addEventListener("submit", async (e) =>{
   const data = respons.data;
   const movies = data.Search;
 
+  //hej
 
  const createHTML = () =>{
     const searchResults = document.getElementById("searchResults") as HTMLDivElement;
