@@ -1,4 +1,4 @@
-import './style.css'
+import './style.scss'
 import axios from 'axios';
 import { IOmdbResponse } from './models/IOmdbResponse';
 import { createmodalInfo } from './createmodalInfo';
