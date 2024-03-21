@@ -8,6 +8,13 @@ export const createmodalInfo = async (movie:IMovie) =>{
   const movieInfoResponse = await fetch( `https://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}`)
   const movieInfo = await movieInfoResponse.json();
   
+  const starRatingContainer = document.createElement("div");
+  const starIconElement = document.createElement("img");
+  starIconElement.className = "star-icon"
+  starIconElement.src = "./../src/img/star_icon.png"; 
+  starRatingContainer.appendChild(starIconElement);
+   
+  
     const movieContainer = document.createElement("div");
       const title = document.createElement("h4");
       const year = document.createElement("h5");
@@ -28,9 +35,9 @@ export const createmodalInfo = async (movie:IMovie) =>{
       title.innerHTML = movieInfo.Title;
       year.innerHTML = "(" + movieInfo.Year + ")";
       movieRating.innerHTML = "Rating:" + movieInfo.imdbRating;
-      moviePlot.innerHTML = movieInfo.Plot;  
       movieActors.innerHTML = "Actors:" + movieInfo.Actors;  
-
+      moviePlot.innerHTML =  movieInfo.Plot;  
+      movieRating.appendChild(starRatingContainer);
 
       movieInfoContainer.appendChild(title)
       movieInfoContainer.appendChild(year)
@@ -41,5 +48,4 @@ export const createmodalInfo = async (movie:IMovie) =>{
       movieContainer.appendChild(movieInfoContainer);
 
       info.appendChild(movieContainer);
-    
     }

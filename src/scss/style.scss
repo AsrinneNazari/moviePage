@@ -110,6 +110,11 @@ cursor: pointer;
   color: gold;
 }
 
+.star-icon{
+  width: 1rem;
+
+}
+
 .movie-actors{
 margin-top: 1rem;
 }
@@ -143,14 +148,11 @@ cursor: pointer;
 .movie-info-container{
   background-color: #140D1D;
   margin: 10px;
+  padding: 10px;
   min-width: 55%;
   border-radius: 1%;
   color: $primaryLight;
-}
-
-.movie-info-container:hover{
-  box-shadow: whitesmoke 0px 0px 15px;
-  transition:0.3s;
+  box-shadow: whitesmoke 0px 0px 10px;
 }
 
 button {
