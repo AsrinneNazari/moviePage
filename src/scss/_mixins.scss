@@ -1,0 +1,19 @@
+@use "./variables" as v;
+
+@mixin for-size($size) {
+  @if $size == tablet {
+    @media screen and (min-width: v.$tablet) {
+      @content;
+    }
+  }
+  @if $size == desktop {
+    @media screen and (min-width: v.$desktop) {
+      @content;
+    }
+  }
+}
+
+//För att använda
+// @include m.for-size(tablet eller desktop){
+//   HÄR ÄR DIN CSS FÖR STÖRRE SKÄRMSTORLEK
+// }

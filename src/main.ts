@@ -1,4 +1,4 @@
-import './style.scss'
+import './../src/scss/style.scss'
 import axios from 'axios';
 import { IOmdbResponse } from './models/IOmdbResponse';
 import { createmodalInfo } from './createmodalInfo';
@@ -25,7 +25,6 @@ document.getElementById("searchForm")?.addEventListener("submit", async (e) =>{
       const year = document.createElement("h4");
       const moviePicture = document.createElement("img");
       moviePicture.src = movie.Poster;
-      console.log("hej")
       movieContainer.className = "movieContainer";
       movieContainer.addEventListener("click", async () =>{
 
