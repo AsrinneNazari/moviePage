@@ -98,9 +98,12 @@ cursor: pointer;
 
 .modal-title{
   color:$primaryLight;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-top: 1rem;
+  @include m.for-size(desktop) {
+    font-size: 1.7rem;
+  }
 }
 
 .movie-Plot{
