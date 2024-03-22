@@ -47,9 +47,11 @@ h4{
 
 #movie-searchContainer{
   display: flex;
-  border-radius: 2%;
+  box-shadow: whitesmoke 0px 0px 10px;
   background-color: rgba(255, 255, 255, 0.2);
-  
+  @include m.for-size(desktop) {
+    border-radius: 1%;
+  }
 }
 
 #searchResults{
@@ -173,4 +175,15 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+footer{
+  color: $primaryLight;
+  //position?
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-align: center;
 }
