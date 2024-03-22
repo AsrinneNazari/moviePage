@@ -88,11 +88,11 @@ cursor: pointer;
   z-index: 230;
   top: 20%;
   left: 25%;
-  width: 55vw;
-  height: 55vh;
+  width: 58vw;
+  height: 58vh;
   @include m.for-size(desktop) {
     height: 59vh;
-    width: 46vw;
+    width: 50vw;
   }
 }
 
@@ -104,8 +104,7 @@ cursor: pointer;
 }
 
 .movie-Plot{
-  margin-top: 2rem;
-  
+  margin-top: 1.5rem; 
 }
 
 .movie-Rating{
@@ -123,14 +122,15 @@ margin-top: 1rem;
 
 #close-modal-info{
 color: $primaryLight;
-position: fixed;
+position: absolute;
 font-size: 1.4em;
-top: 20%;
-right: 20%;
+top: 5%;
+right: 5%;
+z-index: 100;
 cursor: pointer;
 @include m.for-size(desktop) {
-  top: 20%;
-  right: 29%;
+  top: 2%;
+  right: 2%;
 }
 }
 
@@ -142,6 +142,10 @@ cursor: pointer;
   top: 20%;
   left: 25%;
   width: 45vw;
+  height: 52vh;
+  @include m.for-size(desktop) {
+  height: 55vh;
+  }
 }
 
 .movie-picture-modal{
@@ -150,12 +154,16 @@ cursor: pointer;
 
 .movie-info-container{
   background-color: #140D1D;
-  margin: 10px;
+  margin: 0.5rem;
   padding: 10px;
   min-width: 55%;
   border-radius: 1%;
+  font-size: 0.7rem;
   color: $primaryLight;
   box-shadow: whitesmoke 0px 0px 10px;
+  @include m.for-size(desktop) {
+    font-size: 1rem;
+  }
 }
 
 button {
@@ -179,7 +187,7 @@ button:focus-visible {
 
 footer{
   color: $primaryLight;
-  //position?
+  position: fixed; //fixa
   left: 0;
   bottom: 0;
   width: 100%;
