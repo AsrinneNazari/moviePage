@@ -108,6 +108,9 @@ cursor: pointer;
 
 .movie-Plot{
   margin-top: 1.5rem; 
+  @include m.for-size(desktop) {
+    font-size: 0.7rem;
+  }
 }
 
 .movie-Rating{
@@ -121,6 +124,9 @@ cursor: pointer;
 
 .movie-actors{
 margin-top: 1rem;
+@include m.for-size(desktop) {
+  font-size: 0.7rem;
+}
 }
 
 #close-modal-info{
